@@ -17,7 +17,7 @@ public enum HubChannel {
     case auth
 
     case dataStore
-    
+
     case geo
 
     case hub

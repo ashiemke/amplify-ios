@@ -6,8 +6,8 @@
 //
 
 extension GeoCategory: GeoCategoryBehavior {
-    //MARK: - Search
-    
+    // MARK: - Search
+
     /// Search for places or points of interest.
     /// - Parameters:
     ///   - text: The place name or address to be used in the search. (case insensitive)
@@ -21,12 +21,11 @@ extension GeoCategory: GeoCategoryBehavior {
     ///   - completionHandler: The completion handler receives a Response object.  The
     ///   success case provides a Place array.
     public func search(for text: String,
-                area: SearchArea? = nil,
-                countries: [String]? = nil,
-                maxResults: Int? = nil,
-                placeIndexName: String? = nil,
-                completionHandler: @escaping GeoResultsHandler<[Place]>)
-    {
+                       area: SearchArea? = nil,
+                       countries: [String]? = nil,
+                       maxResults: Int? = nil,
+                       placeIndexName: String? = nil,
+                       completionHandler: @escaping GeoResultsHandler<[Place]>) {
         plugin.search(for: text,
                       area: area,
                       countries: countries,
@@ -46,17 +45,16 @@ extension GeoCategory: GeoCategoryBehavior {
     ///   - completionHandler: The completion handler receives a Response object.  The
     ///   success case provides a Place array.
     public func search(for coordinates: Coordinates,
-                maxResults: Int? = nil,
-                placeIndexName: String? = nil,
-                completionHandler: @escaping GeoResultsHandler<[Place]>)
-    {
+                       maxResults: Int? = nil,
+                       placeIndexName: String? = nil,
+                       completionHandler: @escaping GeoResultsHandler<[Place]>) {
         plugin.search(for: coordinates,
                       maxResults: maxResults,
                       placeIndexName: placeIndexName,
                       completionHandler: completionHandler)
     }
 
-    //MARK: - Maps
+    // MARK: - Maps
 
     /// Retrieves metadata for available Map resources.
     /// - Parameter completionHandler: The completion handler receives a Response
@@ -64,7 +62,7 @@ extension GeoCategory: GeoCategoryBehavior {
     public func getAvailableMaps() -> [MapStyle] {
         plugin.getAvailableMaps()
     }
-    
+
     /// Retrieves the default Map resource (first map in amplifyconfiguration.json).
     /// - Parameter completionHandler: The completion handler receives a Response
     /// object.  The success case provides an array of available Map resources.
@@ -72,5 +70,3 @@ extension GeoCategory: GeoCategoryBehavior {
         plugin.getDefaultMap()
     }
 }
-
-

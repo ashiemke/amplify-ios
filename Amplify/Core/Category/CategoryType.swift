@@ -24,7 +24,7 @@ public enum CategoryType: String {
 
     /// Persist data
     case dataStore
-    
+
     /// Interact with geospatial services
     case geo
 

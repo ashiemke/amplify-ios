@@ -53,7 +53,7 @@ public enum SearchArea {
     case within(BoundingBox)
 }
 
-public extension SearchArea  {
+public extension SearchArea {
     /// Creates a SearchArea that returns results closest to the given
     /// CLLocationCoordinate2D.
     /// - Parameter coordinates: The coordinates for the search area.
@@ -89,4 +89,3 @@ public struct MapStyle {
     /// The URL to retrieve the style descriptor of the map resource.
     let styleURL: URL
 }
-

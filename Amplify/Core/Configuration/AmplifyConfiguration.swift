@@ -32,7 +32,7 @@ public struct AmplifyConfiguration: Codable {
 
     /// Configurations for the Amplify DataStore category
     let dataStore: DataStoreCategoryConfiguration?
-    
+
     /// Configurations for the Amplify Geo category
     let geo: GeoCategoryConfiguration?
 
@@ -56,8 +56,7 @@ public struct AmplifyConfiguration: Codable {
                 hub: HubCategoryConfiguration? = nil,
                 logging: LoggingCategoryConfiguration? = nil,
                 predictions: PredictionsCategoryConfiguration? = nil,
-                storage: StorageCategoryConfiguration? = nil)
-    {
+                storage: StorageCategoryConfiguration? = nil) {
         self.analytics = analytics
         self.api = api
         self.auth = auth
