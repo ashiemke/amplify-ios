@@ -17,6 +17,12 @@ public struct Coordinates {
     let latitude: Double
     /// The longitude of the location.
     let longitude: Double
+
+    /// Initializer
+    public init(latitude: Double, longitude: Double) {
+        self.latitude = latitude
+        self.longitude = longitude
+    }
 }
 
 public extension Coordinates {
@@ -43,6 +49,12 @@ public struct BoundingBox {
     let southwest: Coordinates
     /// The northeast corner of the bounding box.
     let northeast: Coordinates
+
+    /// Initializer
+    public init(southwest: Coordinates, northeast: Coordinates) {
+        self.southwest = southwest
+        self.northeast = northeast
+    }
 }
 
 /// The area to search.
@@ -78,6 +90,16 @@ public struct Place {
     let subRegion: String?
     /// The municipality of the place.
     let municipality: String?
+
+    /// Initializer
+    public init(label: String, coordinates: Coordinates, country: String?, region: String?, subRegion: String?, municipality: String?) {
+        self.label = label
+        self.coordinates = coordinates
+        self.country = country
+        self.region = region
+        self.subRegion = subRegion
+        self.municipality = municipality
+    }
 }
 
 /// Identifies the name and style for a map resource.
@@ -88,4 +110,11 @@ public struct MapStyle {
     let style: String
     /// The URL to retrieve the style descriptor of the map resource.
     let styleURL: URL
+
+    /// Initializer
+    public init(mapName: String, style: String, styleURL: URL) {
+        self.mapName = mapName
+        self.style = style
+        self.styleURL = styleURL
+    }
 }
