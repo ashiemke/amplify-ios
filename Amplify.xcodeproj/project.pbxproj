@@ -16,6 +16,7 @@
 		210DBC142332B3C6009B9E51 /* StorageGetURLOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210DBC132332B3C6009B9E51 /* StorageGetURLOperation.swift */; };
 		210DBC162332B3CB009B9E51 /* StorageDownloadDataOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210DBC152332B3CB009B9E51 /* StorageDownloadDataOperation.swift */; };
 		210DBC472332F0C5009B9E51 /* StorageError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210DBC462332F0C5009B9E51 /* StorageError.swift */; };
+		211FFEE326CD650500F0DB75 /* DataStoreQuerySnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211FFEE226CD650500F0DB75 /* DataStoreQuerySnapshot.swift */; };
 		2125E2542319EC3100B3DEB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2125E2532319EC3100B3DEB5 /* AppDelegate.swift */; };
 		2125E2562319EC3100B3DEB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2125E2552319EC3100B3DEB5 /* ViewController.swift */; };
 		2125E2592319EC3100B3DEB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2125E2572319EC3100B3DEB5 /* Main.storyboard */; };
@@ -847,6 +848,7 @@
 		210DBC132332B3C6009B9E51 /* StorageGetURLOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageGetURLOperation.swift; sourceTree = "<group>"; };
 		210DBC152332B3CB009B9E51 /* StorageDownloadDataOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageDownloadDataOperation.swift; sourceTree = "<group>"; };
 		210DBC462332F0C5009B9E51 /* StorageError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageError.swift; sourceTree = "<group>"; };
+		211FFEE226CD650500F0DB75 /* DataStoreQuerySnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreQuerySnapshot.swift; sourceTree = "<group>"; };
 		2125E2102318D73B00B3DEB5 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		2125E2512319EC3000B3DEB5 /* AmplifyTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmplifyTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2125E2532319EC3100B3DEB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -3858,6 +3860,7 @@
 			isa = PBXGroup;
 			children = (
 				FAD393702381FD3C00463F5E /* DataStoreCategory+Subscribe.swift */,
+				211FFEE226CD650500F0DB75 /* DataStoreQuerySnapshot.swift */,
 				FA9FD2332381CD0000A7CAF5 /* MutationEvent.swift */,
 				FA8F4D232395B1B600861D91 /* MutationEvent+Model.swift */,
 				FACBAD4F2386101100E29E56 /* MutationEvent+MutationType.swift */,
@@ -5243,6 +5246,7 @@
 				B4251A0124250369007F59EF /* AuthConfirmResetPasswordRequest.swift in Sources */,
 				FAAFAF2F23904B14002CF932 /* AtomicValue+Bool.swift in Sources */,
 				B9B50DC823DA15890086F1E1 /* DataStoreError+Temporal.swift in Sources */,
+				211FFEE326CD650500F0DB75 /* DataStoreQuerySnapshot.swift in Sources */,
 				FA249EEB24C5FE66009B3CE8 /* AmplifyAPICategory+GraphQLBehavior+Combine.swift in Sources */,
 				FACD26502386E9410068FBE6 /* JSONValue+Subscript.swift in Sources */,
 				B450741324115C260098F02D /* AuthSignInRequest.swift in Sources */,

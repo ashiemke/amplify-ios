@@ -174,10 +174,23 @@ extension AWSDataStorePlugin: DataStoreBaseBehavior {
     }
 
     public func start(completion: @escaping DataStoreCallback<Void>) {
-        reinitStorageEngineIfNeeded(completion: completion)
+        reinitStorageEngineIfNeeded { result in
+            self.operationQueue.operations.forEach { operation in
+                if let operation = operation as? DataStoreObseverQueryOperation {
+                    operation.initiateFirstSnapshot()
+                }
+            }
+            completion(result)
+        }
     }
 
     public func stop(completion: @escaping DataStoreCallback<Void>) {
+        isDataStoreReady.set(false)
+        operationQueue.operations.forEach { operation in
+            if let operation = operation as? DataStoreObseverQueryOperation {
+                operation.initiateFirstSnapshot()
+            }
+        }
         storageEngineInitSemaphore.wait()
         if storageEngine == nil {
             storageEngineInitSemaphore.signal()
@@ -192,6 +205,12 @@ extension AWSDataStorePlugin: DataStoreBaseBehavior {
     }
 
     public func clear(completion: @escaping DataStoreCallback<Void>) {
+        isDataStoreReady.set(false)
+        operationQueue.operations.forEach { operation in
+            if let operation = operation as? DataStoreObseverQueryOperation {
+                operation.resetState()
+            }
+        }
         storageEngineInitSemaphore.wait()
         if storageEngine == nil {
             storageEngineInitSemaphore.signal()
